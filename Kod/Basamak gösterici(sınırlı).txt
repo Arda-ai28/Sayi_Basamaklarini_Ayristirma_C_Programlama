@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() {
+	
+	int sayi,birler,onlar,yuzler,binler,onbinler,yuzbinler;
+	
+	printf("bir sayi giriniz: ");
+	scanf("%d",&sayi);
+	
+	switch (sayi > 999999){
+		case 1 :
+			printf("Lutfen yuzbinler basamagini gecmeyiniz");
+			break;
+		
+	
+		default :
+			yuzbinler=sayi/100000;
+			printf("%d\n",yuzbinler);
+	
+			onbinler=sayi/10000;
+			onbinler=onbinler%10;
+			printf("%d\n",onbinler);
+	
+			binler=sayi/1000;
+			binler=binler%10;
+			printf("%d\n",binler);
+	
+			yuzler=sayi/100;
+			yuzler=yuzler%10;
+			printf("%d\n",yuzler);
+	
+			onlar=sayi/10;
+			onlar=onlar%10;
+			printf("%d\n",onlar);
+	
+			birler=sayi%10;
+			printf("%d",birler);
+				break;
+	
+	
+			}
+	return 0;
+}
